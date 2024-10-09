@@ -50,7 +50,8 @@ jobs:
         with:
           # Your image name
           images: kaungnyo/a3-dash
-          tags: type=semver,pattern={{raw}}
+          # tags: type=semver,pattern={{raw}}
+          tags: latest
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
