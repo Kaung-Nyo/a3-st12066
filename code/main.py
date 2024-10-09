@@ -13,7 +13,7 @@ import dash_bootstrap_components as dbc
 from dash import Dash
 #test test
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
-
+c = 0
 global EncodedLabel
 EncodedLabel = {
     "Diesel": 0,
