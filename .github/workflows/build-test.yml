@@ -122,17 +122,8 @@ jobs:
             echo "Listing files:"
             ls -al
 
-            # echo "Pulling the latest Docker image..."
-            # docker pull kaungnyo/a3-dash:${{ github.ref_name }} || { echo "Docker not found. Exiting."; exit 1; }
-            
-            # echo "Stopping existing containers..."
-            # docker compose down || true 
-            
-            # echo "Starting containers with Docker Compose..."
-            # docker compose up -d 
-
-            docker compose -f st125066/docker-compose.yaml down
-            docker compose -f st125066/docker-compose.yaml up
+            tag=${{ github.ref_name }} docker compose -f st125066/docker-compose.yaml down
+            tag=${{ github.ref_name }} docker compose -f st125066/docker-compose.yaml up -d
 
             exit  # End the SSH session
           EOF
