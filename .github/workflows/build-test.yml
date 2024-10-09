@@ -39,7 +39,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t kaungnyo/a3-dash:latest .
+          docker buildx build -t kaungnyo/a3-dash:latest -f dash.Dockerfile .
       # If the testing pass, upload the image
       - name: Login to Docker Hub
         uses: docker/login-action@v3
