@@ -50,16 +50,16 @@ jobs:
         with:
           # Your image name
           images: kaungnyo/a3-dash
-          # tags: type=semver,pattern={{raw}}
-          tags: latest
+          tags: type=semver,pattern={{raw}}
+          # tags: latest
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
           file: dash.Dockerfile
           push: true
-          # tags: ${{ steps.meta.outputs.tags }}
-          tags: latest
+          tags: ${{ steps.meta.outputs.tags }}
+          # tags: latest
   # deploy:
   #   environment: Production
   #   needs: build-test
