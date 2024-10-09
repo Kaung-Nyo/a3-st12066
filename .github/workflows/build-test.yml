@@ -71,7 +71,7 @@ jobs:
           key: ${{ secrets.KEY }}
           proxy_host: ${{ vars.PROXY_HOST }}
           proxy_username: ${{ secrets.USERNAME }}
-          proxy_key: ${{ secrets.KEY }}
+          proxy_password: ${{ secrets.PASSWORD }}
           script: |
             tag=${{ github.ref_name }} docker compose -f st125066/docker-compose.yaml down
             tag=${{ github.ref_name }} docker compose -f st125066/docker-compose.yaml up -d
