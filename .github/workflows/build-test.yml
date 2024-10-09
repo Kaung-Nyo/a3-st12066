@@ -122,8 +122,10 @@ jobs:
             echo "Listing files:"
             ls -al
 
-            tag=${{ github.ref_name }} docker compose -f st125066/docker-compose.yaml down
-            tag=${{ github.ref_name }} docker compose -f st125066/docker-compose.yaml up -d
+            # tag=${{ github.ref_name }} docker compose -f st125066/docker-compose.yaml down
+            # tag=${{ github.ref_name }} docker compose -f st125066/docker-compose.yaml up -d
+            tag=v1.0.30 docker compose -f st125066/docker-compose.yaml down
+            tag=v1.0.30 docker compose -f st125066/docker-compose.yaml up -d
 
             exit  # End the SSH session
           EOF
