@@ -136,10 +136,10 @@ jobs:
             docker pull kaungnyo/a3-dash:latest || { echo "Docker not found. Exiting."; exit 1; }
             
             echo "Stopping existing containers..."
-            docker compose down || true 
+            docker compose -f st125066/docker-compose.yaml down || true 
             
             echo "Starting containers with Docker Compose..."
-            docker compose up -d 
+            docker compose -f st125066/docker-compose.yaml up -d 
 
             exit  # End the SSH session
           EOF
