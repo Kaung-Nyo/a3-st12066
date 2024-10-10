@@ -13,7 +13,7 @@ import dash_bootstrap_components as dbc
 from dash import Dash
 #test test
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
-
+c = 0
 global EncodedLabel
 EncodedLabel = {
     "Diesel": 0,
@@ -170,7 +170,7 @@ app.layout = html.Div(
     dcc.Tabs(
         [
             dcc.Tab(
-                label="Classification",
+                label="Classification v1.0.37",
                 children=[
                     html.H2(
                         children="Car Price Prediction",
