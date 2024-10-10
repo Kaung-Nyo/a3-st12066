@@ -170,7 +170,7 @@ app.layout = html.Div(
     dcc.Tabs(
         [
             dcc.Tab(
-                label="Classification v1.0.26",
+                label="Classification v1.0.37",
                 children=[
                     html.H2(
                         children="Car Price Prediction",
